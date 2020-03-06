@@ -1,0 +1,145 @@
+/*stylesheet*/
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing:border-box;
+}
+/*محدش يلعب هنا*/
+@font-face{
+  font-family:other;
+  src:url(../fonts/other.woff);
+}
+@font-face{
+  font-family:px;
+  src:url(../fonts/pxf.woff);
+}
+main{
+  display:grid;
+  grid-template-columns:60vw 38.8vw;
+  grid-template-rows:15vh 80vh 80vh 25vh ;
+  grid-template-areas: 
+    "navo navo"
+    "secnn secnn"
+    "art art"
+    "foot foot"
+    ;
+}
+/*alert tany*/
+
+
+/*strart navbar*/
+nav{
+  grid-area:navo;
+  background-color:#1a1b1c;
+  position:fixed;
+  width:98.8vw;
+  height: 15vh;
+  box-shadow:1px 1px 5px gray;
+  z-index:1;
+}
+nav .nav-father{
+ display:flex;
+  width:98.8vw;
+  height:15vh;
+  flex-direction:row;
+
+}
+.nav-father .search-bar{
+  display:flex;
+  align-self: center;
+  width:45vw;
+}
+.nav-father .search-bar form{
+  position: relative;
+  width:45vw;
+  height:5vh;
+  display:flex;
+  justify-content:center;
+}
+.nav-father .search-bar form input{
+  width:80%;
+  height:6vh;
+  padding:.5em;
+  border:3px solid orange;
+  border-radius:.9em;
+}
+.nav-father i{
+  color:black;
+  position: absolute;
+  left: 37.78vw;
+  top:.15em;
+  border:.6em solid orange;;
+  background-color: orange;
+  border-radius:20px 10px 8px 0px;
+  cursor:pointer
+}
+.nav-father .header{
+  width:26.9vw;
+  display:flex;
+  justify-content: center;
+}
+.nav-father .header h1{
+  color: orange;
+  font-family:other;
+  font-size:40px;
+  align-self:center;
+}
+.un-list{
+  width: 26vw;
+  height:15vh;
+}
+.un-list ul{
+  display:flex;
+  width:20vw;
+  height:15vh;
+  list-style: none;
+  justify-content:space-around;
+  align-items: center;
+}
+.un-list ul li a{
+  text-decoration:none;
+  font-size:1.5em;
+  color:whitesmoke;
+  font-family:arial;
+  
+}
+.un-list ul li .an{
+  border:.1em solid orange;
+  padding:.2em;
+  border-top:transparent ;
+  border-right:transparent;
+  border-left:transparent;
+  
+}
+.un-list ul li .on{
+  position: relative;
+}
+.un-list ul li .on:before{
+  content:'';
+        position:absolute;
+        width:4.5vw;
+        transform:scaleX(0);
+        height:2px;
+        top:30px;
+        left:0;
+        background-color:orange;
+        transform-origin:bottom left;
+        transition:transform 0.25s ease-out;
+}
+.un-list ul li .on:hover:before{
+  transform:scalex(1)
+}
+/*end navbar*/
+section{
+  grid-area: secnn;
+  z-index:0;
+}
+
+article{
+  grid-area: art;
+  z-index:0;
+}
+footer{
+  grid-area: foot;
+  z-index: 0;
+}
